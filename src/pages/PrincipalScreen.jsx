@@ -1,51 +1,60 @@
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import WeatherWidget from '../components/WeatherWidget';
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import WeatherWidget from "../components/WeatherWidget";
+
+import styles from "./PrincipalScreen.module.css";
 
 export default function PrincipalScreen() {
     return (
-        <main>
+        <main className={styles.mainContainer}>
             <Header />
             <WeatherWidget />
 
-            <section className="services">
-                <div className="services__gallery">
-                    <Link to="/gallery">
+            <section className={styles.services}>
+                    <Link to="/gallery" className={styles.serviceItem}>
                         <img src="/assets/svg/gallery.svg" alt="Icône de galerie" />
+                        <span>Galerie</span>
                     </Link>
-                    <span>Galerie</span>
-                </div>
-                <div className="services__galaxy-store">
-                    <div className="services__galaxy-store__frame">
+
+                <div className={styles.serviceItem}>
+                    <div className={`${styles.serviceFrame} ${styles.frameMagenta}`}>
                         <img src="/assets/svg/basket.svg" alt="Icône du Galaxy Store" />
                     </div>
                     <span>Galaxy Store</span>
                 </div>
-                <div className="services__play-store">
-                    <div className="services__play-store__frame">
-                        <img src="/assets/svg/google_play.svg" alt="Icône du Play Store" />
-                    </div>
-                    <span>Play Store</span>
-                </div>
-                <div className="services__google-chrome">
-                    <div className="services__google-chrome__frame">
-                        <img src="/assets/svg/chrome.svg" alt="Icône Google Chrome" />
+
+                <Link to="/browser" className={styles.serviceItem}>
+                    <div className={styles.serviceFrame}>
+                        <img src="/assets/svg/chrome.svg" alt="Chrome" />
                     </div>
                     <span>Chrome</span>
-                </div>
+                </Link>
+
+                <Link to="/notes" className={styles.serviceItem}>
+                    <div className={`${styles.serviceFrame} ${styles.frameYellow}`}>
+                        📝
+                    </div>
+                    <span>Notes</span>
+                </Link>
             </section>
 
-            <div className="rounds">
-                <div className="rounds__round"></div>
-                <div className="rounds__round"></div>
-                <div className="rounds__round"></div>
-                <div className="rounds__round"></div>
+            <div className={styles.rounds}>
+                <div className={styles.round}></div>
+                <div className={styles.round}></div>
+                <div className={styles.round}></div>
+                <div className={styles.round}></div>
             </div>
 
-            <section className="utilities">
-                <Link to="/appels"><img src="/assets/svg/telephone.svg" alt="Icône d'appel" /></Link>
-                <Link to="/sms"><img src="/assets/svg/sms.svg" alt="Icône SMS" /></Link>
-                <img src="/assets/svg/camera.svg" alt="Icône appareil photo" />
+            <section className={styles.utilities}>
+                <Link to="/appels">
+                    <img src="/assets/svg/telephone.svg" alt="Appels" />
+                </Link>
+                <Link to="/sms">
+                    <img src="/assets/svg/sms.svg" alt="SMS" />
+                </Link>
+                <Link to="/camera">
+                    <img src="/assets/svg/camera.svg" alt="Appareil photo" />
+                </Link>
             </section>
         </main>
     );

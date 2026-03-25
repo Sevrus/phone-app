@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import styles from "./WeatherWidget.module.css";
+
 const weatherIcons = {
     "Thunderstorm": "wi wi-thunderstorm",
     "Drizzle": "wi wi-sleet",
@@ -42,13 +44,13 @@ export default function WeatherWidget() {
     const formattedDescription = description.charAt(0).toUpperCase() + description.slice(1);
 
     return (
-        <section className="meteo">
-            <h1 className="meteo__city">{weather.name.slice(-5)}</h1>
-            <i className={`wi ${weatherIcons[conditions] || "wi-day-sunny"}`}></i>
+        <section className={styles.meteo}>
+            <h1 className={styles.city}>{weather.name.slice(-5)}</h1>
+            <i style={{fontSize: "3.5rem", marginBottom: "10px"}} className={`wi ${weatherIcons[conditions] || "wi-day-sunny"}`}></i>
             <h2>
-                <span className="meteo__temperature">{Math.round(weather.main.temp)}</span> °C
+                <span className={styles.temperature}>{Math.round(weather.main.temp)}</span> °C
                 <br />
-                (<span className="meteo__description">{formattedDescription}</span>)
+                (<span className={styles.description}>{formattedDescription}</span>)
             </h2>
         </section>
     );

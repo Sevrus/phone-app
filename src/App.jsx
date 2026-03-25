@@ -10,10 +10,12 @@ import ErrorScreen from "./pages/ErrorScreen";
 import OffScreen from "./pages/OffScreen";
 import NotesListScreen from "./pages/NotesListScreen";
 import NoteDetailScreen from "./pages/NoteDetailScreen";
+import { PhoneProvider } from './context/PhoneContext';
 
 export default function App() {
     return (
         <Router>
+            <PhoneProvider>
             <Routes>
                 <Route path="/" element={<PinScreen />} />
                 <Route path="/principal" element={<PrincipalScreen />} />
@@ -27,6 +29,7 @@ export default function App() {
                 <Route path="/notes" element={<NotesListScreen />} />
                 <Route path="/notes/:noteId" element={<NoteDetailScreen />} />
             </Routes>
+            </PhoneProvider>
         </Router>
     );
 }

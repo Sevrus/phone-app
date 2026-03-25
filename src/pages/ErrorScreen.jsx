@@ -1,7 +1,9 @@
+import styles from "./ErrorScreen.module.css";
+
 export default function ErrorScreen() {
     return (
-        <main>
-            <section className="error-container">
+        <main className={styles.mainContainer}>
+            <section className={styles.errorContainer}>
                 <h1>Votre numéro est bloqué.</h1>
                 <p>Veuillez contacter votre service client.</p>
 

@@ -9,7 +9,7 @@ export default function GalleryScreen() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
-        <main>
+        <main className={styles.mainContainer}>
             <Header />
 
             <div className={styles.title}>

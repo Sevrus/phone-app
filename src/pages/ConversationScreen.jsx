@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import conversationsData from '../data/conversations.json';
 
+import styles from './ConversationScreen.module.css';
+
 export default function ConversationScreen() {
     const { contactId } = useParams();
 
@@ -23,31 +25,31 @@ export default function ConversationScreen() {
         <main>
             <Header />
 
-            <div className="conversation-title">
+            <div className={styles.title}>
                 <h1 className="conversation-title__title">{conversation.name}</h1>
-                <span className="conversation-title__number">{conversation.number}</span>
+                <span className={styles.titleNumber}>{conversation.number}</span>
             </div>
 
-            <section className="conversation-sms">
-                {conversation.days.map((dayBlock, dayIndex) => (
+            <section className={styles.sms}>
+                {conversation["days"].map((dayBlock, dayIndex) => (
                     <div key={dayIndex}>
-                        <h3 className="conversation-sms__day">{dayBlock.date}</h3>
+                        <h3 className={styles.day}>{dayBlock.date}</h3>
 
                         {dayBlock.messages.map((msg, msgIndex) => (
-                            <div key={msgIndex} className="conversation-sms__days">
+                            <div key={msgIndex} className={styles.days}>
 
                                 {msg.type === "received" ? (
                                     <>
-                                        <img src={conversation.avatar} alt={`Avatar de ${conversation.name}`} />
-                                        <div className="conversation-sms__days__sms-received">
-                                            <p className="conversation-sms__days__sms-received__text">{msg.text}</p>
-                                            <span className="conversation-sms__days__sms-received__hours">{msg.time}</span>
+                                        <img src={conversation["avatar"]} alt={`Avatar de ${conversation.name}`} />
+                                        <div className={styles.smsReceived}>
+                                            <p className={styles.textReceived}>{msg.text}</p>
+                                            <span className={styles.hoursReceived}>{msg.time}</span>
                                         </div>
                                     </>
                                 ) : (
-                                    <div className="conversation-sms__days__sms-sent">
-                                    <p className="conversation-sms__days__sms-sent__text">{msg.text}</p>
-                            <span className="conversation-sms__days__sms-sent__hours">{msg.time}</span>
+                                    <div className={styles.smsSent}>
+                                    <p className={styles.textSent}>{msg.text}</p>
+                            <span className={styles.hoursSent}>{msg.time}</span>
                     </div>
                     )}
 
@@ -57,7 +59,7 @@ export default function ConversationScreen() {
     ))}
 </section>
 
-    <footer className="footer">
+    <footer className={styles.footer}>
         <Link to="/sms">
             <img src="/assets/svg/arrow-back.svg" alt="Flèche retour" />
         </Link>

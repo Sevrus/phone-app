@@ -1,12 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import PinScreen from './pages/PinScreen';
-import PrincipalScreen from './pages/PrincipalScreen';
-import GalleryScreen from './pages/GalleryScreen';
-import CallListScreen from './pages/CallListScreen';
-import SmsListScreen from './pages/SmsListScreen';
-import ConversationScreen from './pages/ConversationScreen';
-import ErrorScreen from './pages/ErrorScreen';
+import PinScreen from "./pages/PinScreen";
+import PrincipalScreen from "./pages/PrincipalScreen";
+import GalleryScreen from "./pages/GalleryScreen";
+import CallListScreen from "./pages/CallListScreen";
+import SmsListScreen from "./pages/SmsListScreen";
+import ConversationScreen from "./pages/ConversationScreen";
+import ErrorScreen from "./pages/ErrorScreen";
+import OffScreen from "./pages/OffScreen";
 
 export default function App() {
     return (
@@ -26,6 +27,8 @@ export default function App() {
                 <Route path="/error" element={<ErrorScreen />} />
 
                 <Route path="*" element={<PinScreen />} />
+
+                <Route path="/off" element={<OffScreen />} />
             </Routes>
         </Router>
     );

@@ -1,0 +1,15 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://r2.community.samsung.com/t5/image/serverpage/image-id/3584148iFED8BB89E1D5CE26?v=v2");
+    background-size: cover;
+}
+
+.errorContainer {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: red;
+}

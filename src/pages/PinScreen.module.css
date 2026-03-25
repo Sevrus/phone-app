@@ -1,0 +1,68 @@
+.mainContainer {
+    background-image: url("https://r2.community.samsung.com/t5/image/serverpage/image-id/3584148iFED8BB89E1D5CE26?v=v2");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPin {
+    color: #fff;
+    text-align: center;
+}
+
+.title {
+    font-size: 1em;
+}
+
+.enterPin {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-align: center;
+    width: 191px;
+    font-size: 1.5em;
+}
+
+.instructions {
+    font-size: 0.8em;
+}
+
+.digits {
+    margin-top: 20px;
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+.digit,
+.digitOk,
+.backspace {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.digit {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .3);
+    flex-direction: column;
+}
+
+.digitNumber {
+    font-size: 1.4em;
+}
+
+.digitLetters {
+    font-size: 0.5em;
+}
+
+.empreinte{
+    width: 50px;
+    margin-top: 30px;
+}

@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.8em;
+    padding: 10px 15px;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.images{
+    height: 0.8em;
+}

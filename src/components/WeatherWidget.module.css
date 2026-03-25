@@ -1,0 +1,19 @@
+.meteo {
+    text-align: center;
+    color: white;
+    margin-top: 147px;
+}
+
+.city {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-transform: capitalize;
+}

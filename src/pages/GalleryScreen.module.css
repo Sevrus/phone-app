@@ -1,0 +1,64 @@
+.mainContainer {
+    position: relative;
+    background-color: #010101;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background-color: #767676;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.gallery {
+    background-color: #fff;
+    flex-grow: 1;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer img {
+    width: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,97 @@
+main {
+    background-color: #010101;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background-color: #767676;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.callList {
+    background-color: #fff;
+    padding: 0 20px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.callList h3 {
+    margin-top: 10px;
+}
+
+.day {
+    font-size: 0.7em;
+    text-align: center;
+    color: #868686;
+    clear: both;
+    position: relative;
+}
+
+.day::before,
+.day::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #868686;
+    position: absolute;
+    top: 50%;
+}
+
+.day::before {
+    left: 7%;
+}
+
+.day::after {
+    right: 7%;
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+div.days:nth-child(90) {
+    margin-bottom: 10px;
+}
+
+.days img {
+    width: 30px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone {
+    font-size: 0.9em;
+}
+
+.name,
+.hours {
+    font-size: 0.8em;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer img {
+    width: 30px;
+    cursor: pointer;
+}

@@ -10,7 +10,8 @@ import ErrorScreen from "./pages/ErrorScreen";
 import OffScreen from "./pages/OffScreen";
 import NotesListScreen from "./pages/NotesListScreen";
 import NoteDetailScreen from "./pages/NoteDetailScreen";
-import BrowserScreen from './pages/BrowserScreen';
+import BrowserScreen from "./pages/BrowserScreen";
+import CameraScreen from "./pages/CameraScreen.jsx";
 import { PhoneProvider } from './context/PhoneContext';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
                 <Route path="/notes" element={<NotesListScreen />} />
                 <Route path="/notes/:noteId" element={<NoteDetailScreen />} />
                 <Route path="/browser" element={<BrowserScreen />} />
+                <Route path="/camera" element={<CameraScreen />} />
             </Routes>
             </PhoneProvider>
         </Router>

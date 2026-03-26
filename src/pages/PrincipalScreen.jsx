@@ -23,12 +23,14 @@ export default function PrincipalScreen() {
                     <span>Galaxy Store</span>
                 </div>
 
-                <Link to="/browser" className={styles.serviceItem}>
-                    <div className={styles.serviceFrame}>
-                        <img src="/assets/svg/chrome.svg" alt="Chrome" />
-                    </div>
+                <div className="services__google-chrome">
+                    <Link to="/browser">
+                        <div className="services__google-chrome__frame">
+                            <img src="/assets/svg/chrome.svg" alt="Icône Google Chrome" />
+                        </div>
+                    </Link>
                     <span>Chrome</span>
-                </Link>
+                </div>
 
                 <Link to="/notes" className={styles.serviceItem}>
                     <div className={`${styles.serviceFrame} ${styles.frameYellow}`}>

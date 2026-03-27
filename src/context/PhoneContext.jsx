@@ -7,6 +7,7 @@ export function PhoneProvider({ children }) {
     const [battery, setBattery] = useState(30);
     const [time, setTime] = useState('');
     const [isShuttingDown, setIsShuttingDown] = useState(false);
+    const [isCameraBroken, setIsCameraBroken] = useState(false);
 
     const navigate = useNavigate();
 
@@ -47,8 +48,15 @@ export function PhoneProvider({ children }) {
         setIsShuttingDown(false);
     };
 
+    const markCameraAsBroken = () => {
+        setIsCameraBroken(true);
+    };
+
     return (
-        <PhoneContext.Provider value={{ battery, time, isShuttingDown, recharge }}>
+        <PhoneContext.Provider value={{
+            battery, time, isShuttingDown, recharge,
+            isCameraBroken, markCameraAsBroken
+        }}>
             {children}
         </PhoneContext.Provider>
     );

@@ -16,6 +16,7 @@ main {
     font-family: "Roboto", sans-serif;
     position: relative;
     overflow: hidden;
+    display: block;
 }
 
 @keyframes smartphoneOff {
@@ -31,6 +32,14 @@ main {
         opacity: 1;
         backdrop-filter: brightness(0);
     }
+}
+
+@keyframes shake {
+    0% { transform: translateX(-50%) translateY(0); }
+    25% { transform: translateX(-52%) translateY(-2px); }
+    50% { transform: translateX(-48%) translateY(2px); }
+    75% { transform: translateX(-51%) translateY(-1px); }
+    100% { transform: translateX(-50%) translateY(0); }
 }
 
 .shutdown-overlay {

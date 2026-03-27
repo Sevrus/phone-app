@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import WeatherWidget from "../components/WeatherWidget";
+import { usePhone } from '../context/PhoneContext';
 
 import styles from "./PrincipalScreen.module.css";
 
 export default function PrincipalScreen() {
+    const { isCameraBroken } = usePhone()
+
     return (
         <main className={styles.mainContainer}>
             <Header />
@@ -54,9 +57,13 @@ export default function PrincipalScreen() {
                 <Link to="/sms">
                     <img src="/assets/svg/sms.svg" alt="SMS" />
                 </Link>
-                <Link to="/camera">
-                    <img src="/assets/svg/camera.svg" alt="Appareil photo" />
-                </Link>
+                {isCameraBroken ? (
+                    <div className={styles.lotusIcon}>🌸</div>
+                ) : (
+                    <Link to="/camera">
+                        <img src="/assets/svg/camera.svg" alt="Appareil photo" />
+                    </Link>
+                )}
             </section>
         </main>
     );

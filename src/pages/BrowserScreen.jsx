@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import historyData from '../data/history.json';
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import historyData from "../data/history.json";
 
 import styles from "./BrowserScreen.module.css";
 
@@ -9,7 +9,6 @@ export default function BrowserScreen() {
         <main>
                 <Header />
 
-            {/* Fausse barre de recherche Chrome */}
             <div className={styles.searchBar}>
                 <img src="/assets/svg/chrome.svg" alt="Chrome" />
                 <h1>Historique</h1>
@@ -26,7 +25,7 @@ export default function BrowserScreen() {
                             {dayBlock.searches.map((search, sIndex) => (
                                 <div key={sIndex} style=
                                     {{
-                                       borderBottom: sIndex !== dayBlock.searches.length - 1 ? '1px solid #f1f3f4' : 'none'
+                                       borderBottom: sIndex !== dayBlock.searches.length - 1 ? "1px solid #f1f3f4" : "none"
                                     }}
                                     className={styles.card}
                                 >

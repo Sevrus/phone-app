@@ -58,9 +58,7 @@ export default function PrincipalScreen() {
                     <img src="/assets/svg/sms.svg" alt="SMS" />
                 </Link>
                 {isCameraBroken ? (
-                    <div style={{ filter: 'sepia(1) saturate(2) hue-rotate(300deg)', opacity: 0.8 }}>
-                        <span style={{ fontSize: '40px' }}>🌸</span>
-                    </div>
+                    <div className={styles.lotusIcon}>🌸</div>
                 ) : (
                     <Link to="/camera">
                         <img src="/assets/svg/camera.svg" alt="Appareil photo" />

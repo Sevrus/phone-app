@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
-import { usePhone } from '../context/PhoneContext';
+import { usePhone } from "../context/PhoneContext";
 
 import styles from "./CameraScreen.module.css";
 
@@ -8,12 +8,37 @@ export default function CameraScreen() {
     const [showCreepyGif, setShowCreepyGif] = useState(false);
     const { markCameraAsBroken } = usePhone();
 
+    const hasPlayed = useRef(false);
+    const audioRef = useRef(new Audio("/assets/audio/glass-shatter.mp3"));
+// TO DO: Repair audio
     useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.volume = 0.6;
+            audioRef.current.preload = "auto";
+        }
+
         const timer = setTimeout(() => {
-            setShowCreepyGif(true);
-            markCameraAsBroken();
+            if (!hasPlayed.current && audioRef.current) {
+                audioRef.current.play()
+                    .then(() => {
+                        hasPlayed.current = true;
+                    })
+                    .catch(e => {
+                        console.error("Erreur lecture audio :", e);
+                    });
+
+                setShowCreepyGif(true);
+                markCameraAsBroken();
+            }
         }, 3000);
-        return () => clearTimeout(timer);
+
+        return () => {
+            clearTimeout(timer);
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = "";
+            }
+        };
     }, [markCameraAsBroken]);
 
     return (

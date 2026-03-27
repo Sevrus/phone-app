@@ -1,25 +1,23 @@
-import { useState, useEffect, useRef } from 'react'; // On ajoute useRef
-import { Link } from 'react-router-dom';
-import { usePhone } from '../context/PhoneContext';
-import styles from './CameraScreen.module.css';
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { usePhone } from "../context/PhoneContext";
+import styles from "./CameraScreen.module.css";
 
 export default function CameraScreen() {
     const [showCreepyGif, setShowCreepyGif] = useState(false);
     const { markCameraAsBroken } = usePhone();
 
-    // On crée une référence pour savoir si le son a déjà été joué
     const hasPlayed = useRef(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            // VERIFICATION : Si le son n'a pas encore été joué
             if (!hasPlayed.current) {
-                const audio = new Audio('/assets/audio/glass-shatter.mp3');
+                const audio = new Audio("/assets/audio/glass-shatter.mp3");
                 audio.volume = 0.6;
 
                 audio.play()
                     .then(() => {
-                        hasPlayed.current = true; // On marque comme joué SEULEMENT après le succès
+                        hasPlayed.current = true;
                     })
                     .catch(e => console.log("Lecture audio bloquée ou échouée", e));
 
@@ -29,7 +27,7 @@ export default function CameraScreen() {
         }, 3000);
 
         return () => {
-            clearTimeout(timer); // Nettoyage crucial du timer si on quitte la page avant les 3s
+            clearTimeout(timer);
         };
     }, [markCameraAsBroken]);
 

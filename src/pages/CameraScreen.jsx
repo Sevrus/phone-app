@@ -1,31 +1,27 @@
-import {useState, useEffect, useRef} from "react";
-import { Link } from "react-router-dom";
-import { usePhone } from "../context/PhoneContext";
-
-import styles from "./CameraScreen.module.css";
+import { useState, useEffect, useRef } from 'react'; // On ajoute useRef
+import { Link } from 'react-router-dom';
+import { usePhone } from '../context/PhoneContext';
+import styles from './CameraScreen.module.css';
 
 export default function CameraScreen() {
     const [showCreepyGif, setShowCreepyGif] = useState(false);
     const { markCameraAsBroken } = usePhone();
 
+    // On crée une référence pour savoir si le son a déjà été joué
     const hasPlayed = useRef(false);
-    const audioRef = useRef(new Audio("/assets/audio/glass-shatter.mp3"));
-// TO DO: Repair audio
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.volume = 0.6;
-            audioRef.current.preload = "auto";
-        }
 
+    useEffect(() => {
         const timer = setTimeout(() => {
-            if (!hasPlayed.current && audioRef.current) {
-                audioRef.current.play()
+            // VERIFICATION : Si le son n'a pas encore été joué
+            if (!hasPlayed.current) {
+                const audio = new Audio('/assets/audio/glass-shatter.mp3');
+                audio.volume = 0.6;
+
+                audio.play()
                     .then(() => {
-                        hasPlayed.current = true;
+                        hasPlayed.current = true; // On marque comme joué SEULEMENT après le succès
                     })
-                    .catch(e => {
-                        console.error("Erreur lecture audio :", e);
-                    });
+                    .catch(e => console.log("Lecture audio bloquée ou échouée", e));
 
                 setShowCreepyGif(true);
                 markCameraAsBroken();
@@ -33,26 +29,19 @@ export default function CameraScreen() {
         }, 3000);
 
         return () => {
-            clearTimeout(timer);
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.src = "";
-            }
+            clearTimeout(timer); // Nettoyage crucial du timer si on quitte la page avant les 3s
         };
     }, [markCameraAsBroken]);
 
     return (
         <main className={styles.container}>
-
             {showCreepyGif ? (
                 <>
-                <div className={styles.brokenGlassOverlay}/>
-                <div className={styles.scareContent}>
-                    <img src="/assets/images/photo-lotus.webp" alt="Forêt" className={styles.scareImage}/>
-                    <h2 className={styles.scareTitle}>
-                        彼らが到着する
-                    </h2>
-                </div>
+                    <div className={styles.brokenGlassOverlay} />
+                    <div className={styles.scareContent}>
+                        <img src="/assets/images/photo-lotus.webp" alt="Forêt" className={styles.scareImage} />
+                        <h2 className={styles.scareTitle}>彼らが到着する</h2>
+                    </div>
                 </>
             ) : (
                 <div className={styles.loaderContainer}>
@@ -61,9 +50,11 @@ export default function CameraScreen() {
                 </div>
             )}
 
-            <Link to="/principal" className={styles.backButton}>
-                <img src="/assets/svg/arrow-back.svg" alt="Retour" className={styles.backIcon} />
-            </Link>
+            <footer>
+                <Link to="/principal" className={styles.backButton}>
+                    <img src="/assets/svg/arrow-back.svg" alt="Retour" className={styles.backIcon} />
+                </Link>
+            </footer>
         </main>
     );
 }

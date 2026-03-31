@@ -16,7 +16,6 @@ main {
     font-family: "Roboto", sans-serif;
     position: relative;
     overflow: hidden;
-    display: block;
 }
 
 @keyframes smartphoneOff {

@@ -1,16 +1,104 @@
 [
-  { "id": "d1", "thumb": "/assets/thumbnail/disney1.jpg", "full": "/images/full/fullDisney1.webp" },
-  { "id": "d2", "thumb": "/assets/thumbnail/disney2.jpg", "full": "/images/full/fullDisney2.webp" },
-  { "id": "d3", "thumb": "/assets/thumbnail/disney3.jpg", "full": "/images/full/fullDisney3.webp" },
-  { "id": "d4", "thumb": "/assets/thumbnail/disney4.jpg", "full": "/images/full/fullDisney4.webp" },
-  { "id": "d5", "thumb": "/assets/thumbnail/disney5.jpg", "full": "/images/full/fullDisney5.webp" },
-  { "id": "d6", "thumb": "/assets/thumbnail/disney6.jpg", "full": "/images/full/fullDisney6.webp" },
-  { "id": "d7", "thumb": "/assets/thumbnail/disney7.jpg", "full": "/images/full/fullDisney7.webp" },
-  { "id": "d8", "thumb": "/assets/thumbnail/disney8.jpg", "full": "/images/full/fullDisney8.webp" },
-  { "id": "t1", "thumb": "/assets/thumbnail/tokyo1.jpg", "full": "/images/full/fullTokyo1.webp" },
-  { "id": "t2", "thumb": "/assets/thumbnail/tokyo2.jpg", "full": "/images/full/fullTokyo2.webp" },
-  { "id": "t3", "thumb": "/assets/thumbnail/tokyo3.jpg", "full": "/images/full/fullTokyo3.webp" },
-  { "id": "t4", "thumb": "/assets/thumbnail/tokyo4.jpg", "full": "/images/full/fullTokyo4.webp" },
-  { "id": "t5", "thumb": "/assets/thumbnail/tokyo5.jpg", "full": "/images/full/fullTokyo5.webp" },
-  { "id": "t6", "thumb": "/assets/thumbnail/tokyo6.jpg", "full": "/images/full/fullTokyo6.webp" }
+  {
+    "id": "d1",
+    "thumb": "/assets/thumbnail/disney1.jpg",
+    "full": "/images/full/fullDisney1.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d2",
+    "thumb": "/assets/thumbnail/disney2.jpg",
+    "full": "/images/full/fullDisney2.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d3",
+    "thumb": "/assets/thumbnail/disney3.jpg",
+    "full": "/images/full/fullDisney3.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d4",
+    "thumb": "/assets/thumbnail/disney4.jpg",
+    "full": "/images/full/fullDisney4.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d5",
+    "thumb": "/assets/thumbnail/disney5.jpg",
+    "full": "/images/full/fullDisney5.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d6",
+    "thumb": "/assets/thumbnail/disney6.jpg",
+    "full": "/images/full/fullDisney6.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d7",
+    "thumb": "/assets/thumbnail/disney7.jpg",
+    "full": "/images/full/fullDisney7.webp",
+    "isSecret": false
+  },
+  {
+    "id": "d8",
+    "thumb": "/assets/thumbnail/disney8.jpg",
+    "full": "/images/full/fullDisney8.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t1",
+    "thumb": "/assets/thumbnail/tokyo1.jpg",
+    "full": "/images/full/fullTokyo1.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t2",
+    "thumb": "/assets/thumbnail/tokyo2.jpg",
+    "full": "/images/full/fullTokyo2.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t3",
+    "thumb": "/assets/thumbnail/tokyo3.jpg",
+    "full": "/images/full/fullTokyo3.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t4",
+    "thumb": "/assets/thumbnail/tokyo4.jpg",
+    "full": "/images/full/fullTokyo4.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t5",
+    "thumb": "/assets/thumbnail/tokyo5.jpg",
+    "full": "/images/full/fullTokyo5.webp",
+    "isSecret": false
+  },
+  {
+    "id": "t6",
+    "thumb": "/assets/thumbnail/tokyo6.jpg",
+    "full": "/images/full/fullTokyo6.webp",
+    "isSecret": false
+  },
+  {
+    "id": "s1",
+    "thumb": "/assets/thumbnail/secretCard.jpg",
+    "full": "/images/full/fullSecretCard.webp",
+    "isSecret": true
+  },
+  {
+    "id": "s2",
+    "thumb": "/assets/thumbnail/secretPicture.jpg",
+    "full": "/images/full/fullSecretPicture.webp",
+    "isSecret": true
+  },
+  {
+    "id": "s3",
+    "thumb": "/assets/thumbnail/secretBook.jpg",
+    "full": "/images/full/fullSecretBook.webp",
+    "isSecret": true
+  }
 ]

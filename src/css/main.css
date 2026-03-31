@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
     background-color: #1c1c2e;
@@ -13,5 +13,41 @@ main {
     width: 309px;
     border: 2px solid #000;
     border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes smartphoneOff {
+    0% {
+        opacity: 0;
+        backdrop-filter: brightness(1);
+    }
+    40% {
+        opacity: 0.8;
+        backdrop-filter: brightness(0.5);
+    }
+    100% {
+        opacity: 1;
+        backdrop-filter: brightness(0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(-50%) translateY(0); }
+    25% { transform: translateX(-52%) translateY(-2px); }
+    50% { transform: translateX(-48%) translateY(2px); }
+    75% { transform: translateX(-51%) translateY(-1px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+.shutdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 99999;
+    animation: smartphoneOff 0.6s ease-out forwards;
 }

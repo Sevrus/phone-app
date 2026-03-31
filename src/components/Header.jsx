@@ -1,35 +1,33 @@
-import { useState, useEffect } from "react";
+import { usePhone } from "../context/PhoneContext";
 
 import styles from "./Header.module.css";
 
 export default function Header() {
-    const [time, setTime] = useState('');
-
-    useEffect(() => {
-        const updateClock = () => {
-            const date = new Date();
-            const tokyoTime = date.toLocaleTimeString("fr-FR", {
-                timeZone: "Asia/Tokyo",
-                hour: "2-digit",
-                minute: "2-digit"
-            });
-            setTime(tokyoTime);
-        };
-
-        updateClock();
-        const intervalId = setInterval(updateClock, 1000);
-
-        return () => clearInterval(intervalId);
-    }, []);
+    const { time, battery, isShuttingDown, recharge } = usePhone();
 
     return (
-        <header className={styles.header}>
-            <div className="hours">{time}</div>
-            <div className={styles.connection}>
-                <img className={styles.images} src="/assets/svg/antenna.svg" alt="Icône réseau" />
-                <span className="connection__percent">30%</span>
-                <img className={styles.images} src="/assets/svg/battery.svg" alt="Icône batterie" />
-            </div>
-        </header>
+        <>
+            {isShuttingDown && <div className="shutdown-overlay"></div>}
+
+            <header className={styles.header}>
+                <div className="hours">{time}</div>
+                <div className={styles.connection}>
+                    <img src="/assets/svg/antenna.svg" alt="Icône réseau" className={styles.images} />
+
+                    <span className="connection__percent" style={{ color: battery <= 10 ? "red" : "white" }}>
+                        {battery}%
+                    </span>
+
+                    <img
+                        src="/assets/svg/battery.svg"
+                        alt="Icône batterie"
+                        onClick={recharge}
+                        className={styles.images}
+                        style={{ cursor: "pointer" }}
+                        title="MJ : Recharger"
+                    />
+                </div>
+            </header>
+        </>
     );
 }

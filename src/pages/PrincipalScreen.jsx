@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import WeatherWidget from "../components/WeatherWidget";
+import { usePhone } from '../context/PhoneContext';
 
 import styles from "./PrincipalScreen.module.css";
 
 export default function PrincipalScreen() {
+    const { isCameraBroken } = usePhone()
+
     return (
         <main className={styles.mainContainer}>
             <Header />
@@ -23,12 +26,14 @@ export default function PrincipalScreen() {
                     <span>Galaxy Store</span>
                 </div>
 
-                <Link to="/browser" className={styles.serviceItem}>
-                    <div className={styles.serviceFrame}>
-                        <img src="/assets/svg/chrome.svg" alt="Chrome" />
-                    </div>
+                <div className="services__google-chrome">
+                    <Link to="/browser">
+                        <div className="services__google-chrome__frame">
+                            <img src="/assets/svg/chrome.svg" alt="Icône Google Chrome" />
+                        </div>
+                    </Link>
                     <span>Chrome</span>
-                </Link>
+                </div>
 
                 <Link to="/notes" className={styles.serviceItem}>
                     <div className={`${styles.serviceFrame} ${styles.frameYellow}`}>
@@ -52,9 +57,13 @@ export default function PrincipalScreen() {
                 <Link to="/sms">
                     <img src="/assets/svg/sms.svg" alt="SMS" />
                 </Link>
-                <Link to="/camera">
-                    <img src="/assets/svg/camera.svg" alt="Appareil photo" />
-                </Link>
+                {isCameraBroken ? (
+                    <div className={styles.lotusIcon}>🌸</div>
+                ) : (
+                    <Link to="/camera">
+                        <img src="/assets/svg/camera.svg" alt="Appareil photo" />
+                    </Link>
+                )}
             </section>
         </main>
     );

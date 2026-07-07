@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Dépendances
-node_modules
+phone-front/node_modules
+phone-back/node_modules
 dist
 dist-ssr
 *.local

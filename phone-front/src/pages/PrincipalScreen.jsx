@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import WeatherWidget from "../components/WeatherWidget";
-import { usePhone } from '../context/PhoneContext';
+import Header from "../components/Header.jsx";
+import WeatherWidget from "../components/WeatherWidget.jsx";
+import { usePhone } from '../context/PhoneContext.jsx';
 
 import styles from "./PrincipalScreen.module.css";
 

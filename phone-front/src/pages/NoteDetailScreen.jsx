@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 import notesData from "../data/notes.json";
 
 import styles from "./NoteDetailScreen.module.css";

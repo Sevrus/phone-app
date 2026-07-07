@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 
 import callsData from "../data/callsData.json";
 import styles from "./CallListScreen.module.css";

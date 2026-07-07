@@ -1,4 +1,4 @@
-import { usePhone } from "../context/PhoneContext";
+import { usePhone } from "../context/PhoneContext.jsx";
 
 import styles from "./Header.module.css";
 

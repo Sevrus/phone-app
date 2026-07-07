@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import PinScreen from "./pages/PinScreen";
-import PrincipalScreen from "./pages/PrincipalScreen";
-import GalleryScreen from "./pages/GalleryScreen";
-import CallListScreen from "./pages/CallListScreen";
-import SmsListScreen from "./pages/SmsListScreen";
-import ConversationScreen from "./pages/ConversationScreen";
-import ErrorScreen from "./pages/ErrorScreen";
-import OffScreen from "./pages/OffScreen";
-import NotesListScreen from "./pages/NotesListScreen";
-import NoteDetailScreen from "./pages/NoteDetailScreen";
-import BrowserScreen from "./pages/BrowserScreen";
+import PinScreen from "./pages/PinScreen.jsx";
+import PrincipalScreen from "./pages/PrincipalScreen.jsx";
+import GalleryScreen from "./pages/GalleryScreen.jsx";
+import CallListScreen from "./pages/CallListScreen.jsx";
+import SmsListScreen from "./pages/SmsListScreen.jsx";
+import ConversationScreen from "./pages/ConversationScreen.jsx";
+import ErrorScreen from "./pages/ErrorScreen.jsx";
+import OffScreen from "./pages/OffScreen.jsx";
+import NotesListScreen from "./pages/NotesListScreen.jsx";
+import NoteDetailScreen from "./pages/NoteDetailScreen.jsx";
+import BrowserScreen from "./pages/BrowserScreen.jsx";
 import CameraScreen from "./pages/CameraScreen.jsx";
-import { PhoneProvider } from './context/PhoneContext';
+import { PhoneProvider } from './context/PhoneContext.jsx';
 
 export default function App() {
     return (

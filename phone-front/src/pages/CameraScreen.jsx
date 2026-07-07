@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { usePhone } from "../context/PhoneContext";
+import { usePhone } from "../context/PhoneContext.jsx";
 import styles from "./CameraScreen.module.css";
 
 export default function CameraScreen() {

@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../components/Header.jsx';
 import conversationsData from '../data/conversations.json';
 
 import styles from './ConversationScreen.module.css';

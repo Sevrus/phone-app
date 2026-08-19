@@ -1,4 +1,10 @@
 [
+    {
+    "id": "parano",
+    "title": "Bizarre...",
+    "date": "30 Oct.",
+    "content": "J'ai encore eu cette sensation étrange aujourd'hui. Comme si on m'observait. \n\nDans le train sur la ligne Keio, il y avait cet homme habillé de façon très stricte qui ne me quittait pas des yeux. Pareil en sortant du Konbini. \nJe suis sûrement paranoïaque à cause de la fatigue et du boulot au bar. Vivement la soirée d'Halloween à Disneyland demain avec Adèle et Akio pour me vider la tête."
+  },
   {
     "id": "courses",
     "title": "À acheter",
@@ -10,11 +16,5 @@
     "title": "M. Sonoda",
     "date": "24 Oct.",
     "content": "Matsunaga insiste vraiment avec cette nouvelle règle du Dohan au Kingdom Queen. Ça me met de plus en plus mal à l'aise. \n\nEt ce client, Sonoda... Il paie très bien, mais il est vraiment oppressant. Cette fixette sur la robe rouge et le fait qu'il connaisse mes horaires me fait froid dans le dos. Je dois faire attention."
-  },
-  {
-    "id": "parano",
-    "title": "Bizarre...",
-    "date": "30 Oct.",
-    "content": "J'ai encore eu cette sensation étrange aujourd'hui. Comme si on m'observait. \n\nDans le train sur la ligne Keio, il y avait cet homme habillé de façon très stricte qui ne me quittait pas des yeux. Pareil en sortant du Konbini. \nJe suis sûrement paranoïaque à cause de la fatigue et du boulot au bar. Vivement la soirée d'Halloween à Disneyland demain avec Adèle et Akio pour me vider la tête."
   }
 ]

@@ -7,21 +7,21 @@
     "htmlName": "adele"
   },
   {
-    "image": "/assets/images/akio.png",
+    "image": "/assets/images/akio.webp",
     "name": "Akio",
     "message": "Tu me manques tellement...",
     "date": "08h45",
     "htmlName": "akio"
   },
   {
-    "image": "/assets/images/papa.png",
+    "image": "/assets/images/papa.webp",
     "name": "Papa",
     "message": "Bonjour, comment vas-tu ?",
     "date": "14 Nov.",
     "htmlName": "papa"
   },
   {
-    "image": "/assets/images/maman.png",
+    "image": "/assets/images/maman.webp",
     "name": "Maman",
     "message": "Ma princesse, on te cherche...",
     "date": "14 Nov.",
@@ -35,11 +35,11 @@
     "htmlName": "bnp"
   },
   {
-    "image": "/assets/images/katashi_matsunaga.png",
-    "name": "M. Matsunaga",
+    "image": "/assets/images/matsunada.webp",
+    "name": "M. Matsunada",
     "message": "Nous t'attendons le vendredi...",
     "date": "1 Nov.",
-    "htmlName": "matsunaga"
+    "htmlName": "matsunada"
   },
   {
     "image": "/assets/svg/random.svg",

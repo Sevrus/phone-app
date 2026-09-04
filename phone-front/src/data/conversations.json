@@ -107,7 +107,7 @@
   "akio": {
     "name": "Akio",
     "number": "4256 18903 7654",
-    "avatar": "/assets/images/akio.png",
+    "avatar": "/assets/images/akio.webp",
     "days": [
       {
         "date": "mardi 11 juin 2024",
@@ -262,7 +262,7 @@
   "maman": {
     "name": "Maman",
     "number": "+33 7 21 59 86 34",
-    "avatar": "/assets/images/maman.png",
+    "avatar": "/assets/images/maman.webp",
     "days": [
       {
         "date": "mardi 5 novembre 2024",
@@ -284,10 +284,10 @@
       }
     ]
   },
-  "matsunaga": {
-    "name": "M. Matsunaga",
+  "matsunada": {
+    "name": "M. Matsunada",
     "number": "6937 24815 7102",
-    "avatar": "/assets/images/katashi_matsunaga.png",
+    "avatar": "/assets/images/matsunada.webp",
     "days": [
       {
         "date": "lundi 10 juin 2024",
@@ -342,7 +342,7 @@
   "papa": {
     "name": "Papa",
     "number": "+33 6 45 78 23 91",
-    "avatar": "/assets/images/papa.png",
+    "avatar": "/assets/images/papa.webp",
     "days": [
       {
         "date": "lundi 11 novembre 2024",

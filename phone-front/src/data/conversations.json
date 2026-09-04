@@ -43,11 +43,20 @@
         ]
       },
       {
+        "date": "vendredi 25 octobre 2024",
+        "messages": [
+          { "type": "send", "text": "Putain, je deviens parano, je vois le mal partout, sais-tu si le nom Matsushita est commun au Japon ?", "time": "SMS 02h43" },
+          { "type": "send", "text": "Tu vas juste pas croire ce que j'ai trouvé", "time": "SMS 02h44" },
+          { "type": "send", "text": "Merde, tu dois dormir, je suis désolé, je te dirais ça demain", "time": "SMS 02h47" }
+        ]
+      },
+      {
         "date": "dimanche 27 octobre 2024",
         "messages": [
           { "type": "received", "text": "Tu travailles ce soir ? Tu devrais quitter ce job, je sais que ça paye bien, mais c'est déshonorant et dangereux", "time": "SMS 20h43" },
           { "type": "received", "text": "Bref, je suis pressée d'être au 31, je pense que l'on va passer une soirée d'enfer à Disneyland !! 🎃🏰👻", "time": "SMS 20h45" },
-          { "type": "sent", "text": "Oui, je bosse jusqu'à 1h du mat, je sais que c'est dangereux, mais ça paye mes factures et pour l'instant ça me va, je suis aussi hypée par la sortie d'Halloween 😃", "time": "SMS 21h16" }
+          { "type": "sent", "text": "Oui, je bosse jusqu'à 1h du mat, je sais que c'est dangereux, mais ça paye mes factures et pour l'instant ça me va, je suis aussi hypée par la sortie d'Halloween 😃", "time": "SMS 21h16" },
+          { "type": "received", "text": "John m'a dit que sa gorge le grattait, j'espère qu'il n'est pas malade et qu'il pourra venir le 31.", "time": "SMS 20h48" }
         ]
       },
       {

@@ -13,6 +13,7 @@ import NoteDetailScreen from "./pages/NoteDetailScreen.jsx";
 import BrowserScreen from "./pages/BrowserScreen.jsx";
 import CameraScreen from "./pages/CameraScreen.jsx";
 import { PhoneProvider } from './context/PhoneContext.jsx';
+import MjControlScreen from "./pages/MjControlScreen.jsx";
 
 export default function App() {
     return (
@@ -32,6 +33,7 @@ export default function App() {
                 <Route path="/notes/:noteId" element={<NoteDetailScreen />} />
                 <Route path="/browser" element={<BrowserScreen />} />
                 <Route path="/camera" element={<CameraScreen />} />
+                <Route path="/mj-control" element={<MjControlScreen />} />
             </Routes>
             </PhoneProvider>
         </Router>

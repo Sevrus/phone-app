@@ -84,12 +84,6 @@
     "isSecret": false
   },
   {
-    "id": "s1",
-    "thumb": "/assets/thumbnail/secretCard.jpg",
-    "full": "/images/full/fullSecretCard.webp",
-    "isSecret": true
-  },
-  {
     "id": "s2",
     "thumb": "/assets/thumbnail/secretPicture.jpg",
     "full": "/images/full/fullSecretPicture.webp",

@@ -19,8 +19,8 @@ app.get("/", (req, res) => {
 io.on("connection", (socket) => {
     console.log("Client connected");
 
-socket.on("send_mj_command", (data) => {
-        console.log(`Commande MJ [${data.type}]`, data.payload || "");
+    socket.on("send_mj_command", (data) => {
+        console.log(`GM Command [${data.type}]`, data.payload || "");
         socket.broadcast.emit("receive_mj_command", data);
     });
 

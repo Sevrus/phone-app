@@ -8,7 +8,7 @@ export default function PinScreen() {
     const [attempts, setAttempts] = useState(0);
     const navigate = useNavigate();
 
-    const MAX_ATTEMPTS = 5;
+    const MAX_ATTEMPTS = 10;
 
     const handleDigitClick = (digit) => {
         setPinInput(prev => prev + digit);
@@ -39,14 +39,14 @@ export default function PinScreen() {
         <main className={styles.mainContainer}>
             <section className={styles.mainPin}>
                 {pinInput.length === 0 ? (
-                    <h2 className={styles.title}>Entrez votre PIN</h2>
+                    <h2 className={styles.title}>Entrez votre PUK</h2>
                 ) : (
                     <input id="enter-pin" className={styles.enterPin} type="password" value={pinInput} readOnly />
                 )}
 
                 <p className={styles.instructions}>
                     {attempts === 0
-                        ? "Votre PIN contient 5 chiffres"
+                        ? "Votre PUK contient 8 chiffres"
                         : `Il vous reste ${remainingAttempts} tentative${remainingAttempts > 1 ? "s" : ""}`}
                 </p>
 

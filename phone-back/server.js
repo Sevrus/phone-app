@@ -27,6 +27,10 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         console.log(`Client disconnected : ${socket.id}`);
     });
+
+    socket.on('mj_state_change', (state) => {
+        socket.broadcast.emit('receive_mj_state', state);
+    });
 });
 
 const port = process.env.PORT || 3001;

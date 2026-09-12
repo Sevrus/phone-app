@@ -1,0 +1,97 @@
+.container {
+  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 80vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.title {
+  color: #ff4d4d;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+}
+
+.cardTitle {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.rangeInput {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input,
+.textarea {
+  padding: 8px;
+  background-color: #2a2a2a;
+  border: 1px solid #444444;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btnPrimary {
+  background-color: #2563eb;
+  flex: 1;
+}
+
+.btnDanger {
+  background-color: #dc2626;
+}
+
+.btnSuccess {
+  background-color: #16a34a;
+  width: 100%;
+}
+
+.btnDarkDanger {
+  background-color: #991b1b;
+}
+
+.btnWarning {
+  background-color: #d97706;
+}
+
+.btnNeutral {
+  background-color: #4b5563;
+}

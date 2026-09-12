@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Outlet} from "react-router-dom";
 
 import PinScreen from "./pages/PinScreen.jsx";
 import PrincipalScreen from "./pages/PrincipalScreen.jsx";
@@ -18,24 +18,25 @@ import MjControlScreen from "./pages/MjControlScreen.jsx";
 export default function App() {
     return (
         <Router>
-            <PhoneProvider>
             <Routes>
-                <Route path="/" element={<PinScreen />} />
-                <Route path="/principal" element={<PrincipalScreen />} />
-                <Route path="/gallery" element={<GalleryScreen />} />
-                <Route path="/appels" element={<CallListScreen />} />
-                <Route path="/sms" element={<SmsListScreen />} />
-                <Route path="/sms/:contactId" element={<ConversationScreen />} />
-                <Route path="/error" element={<ErrorScreen />} />
-                <Route path="*" element={<PinScreen />} />
-                <Route path="/off" element={<OffScreen />} />
-                <Route path="/notes" element={<NotesListScreen />} />
-                <Route path="/notes/:noteId" element={<NoteDetailScreen />} />
-                <Route path="/browser" element={<BrowserScreen />} />
-                <Route path="/camera" element={<CameraScreen />} />
                 <Route path="/mj-control" element={<MjControlScreen />} />
+
+                <Route element={<PhoneProvider><Outlet /></PhoneProvider>}>
+                    <Route path="/" element={<PinScreen />} />
+                    <Route path="/principal" element={<PrincipalScreen />} />
+                    <Route path="/gallery" element={<GalleryScreen />} />
+                    <Route path="/appels" element={<CallListScreen />} />
+                    <Route path="/sms" element={<SmsListScreen />} />
+                    <Route path="/sms/:contactId" element={<ConversationScreen />} />
+                    <Route path="/error" element={<ErrorScreen />} />
+                    <Route path="*" element={<PinScreen />} />
+                    <Route path="/off" element={<OffScreen />} />
+                    <Route path="/notes" element={<NotesListScreen />} />
+                    <Route path="/notes/:noteId" element={<NoteDetailScreen />} />
+                    <Route path="/browser" element={<BrowserScreen />} />
+                    <Route path="/camera" element={<CameraScreen />} />
+                </Route>
             </Routes>
-            </PhoneProvider>
         </Router>
     );
 }

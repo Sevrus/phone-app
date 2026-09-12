@@ -4,6 +4,7 @@ import WeatherWidget from "../components/WeatherWidget.jsx";
 import { usePhone } from '../context/PhoneContext.jsx';
 
 import styles from "./PrincipalScreen.module.css";
+import SmsAppIcon from "../components/SmsAppIcon.jsx";
 
 export default function PrincipalScreen() {
     const { isCameraBroken } = usePhone()
@@ -54,9 +55,9 @@ export default function PrincipalScreen() {
                 <Link to="/appels">
                     <img src="/assets/svg/telephone.svg" alt="Appels" />
                 </Link>
-                <Link to="/sms">
-                    <img src="/assets/svg/sms.svg" alt="SMS" />
-                </Link>
+                
+                <SmsAppIcon />
+
                 {isCameraBroken ? (
                     <div className={styles.lotusIcon}>🌸</div>
                 ) : (
